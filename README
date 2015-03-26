@@ -1,0 +1,33 @@
+RLF - Reinforcement Learning Framework
+Language: C++
+Started at: 4/3 -15
+Finished at: 12/3 -15
+State: Finished
+Description:
+Implements a base framework class that implements the basic Q-learning
+algorithm, additionally implements an example reinforcement learning model
+that uses the framework.
+
+To use framework, you implement a model class that extends from
+the framework, templated by what class you want to use for model
+and state. The implemented model must provide:
+A function that given a state provides what actions are available.
+A function that given a state and an action, provides a new state and
+an reward.
+A function that provides a set of starting states.
+
+The framework provides:
+* Choosable parameters for greediness, learning rate, etc...
+* The basic Q-learning algorithm
+* Stores the current state and all q-values, so that a model can interface
+  towards them
+* Has a "run for X ticks" function
+* Have a "run untill function X is true" function
+
+Possible future extensions:
+* Implement the SARSA algorithm as well
+
+Deprecated extensions;
+* Modes to choose wether to maximize or minimize reward
+  (This can be done in implemented model by negative rewards)
+
